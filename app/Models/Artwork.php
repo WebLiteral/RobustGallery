@@ -10,12 +10,9 @@ class Artwork extends Model
 
     use HasFactory;
 
-// she's a beauty!!!!!!
+    public $timestamps = true; 
+    protected $fillable = ['title', 'description', 'creation_date', 'slug', 'file_url'];
 
-    public function collections()
-    {
-        return $this->belongsToMany(Collection::class);
-    }
 }
 
 

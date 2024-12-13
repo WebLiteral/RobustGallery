@@ -5,16 +5,31 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a class="flex" href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                        <p class="pl-2 font-bold italic text-2xl">Petri<span class="text-rose-700 font-medium">factories</span></p>
                     </a>
+                    
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    <x-nav-link href="/">
+                        {{ __('Home') }}
+                    </x-nav-link>
+
+
+                    <x-nav-link :href="route('admin.artworks')" :active="request()->routeIs('adminartworks')">
+                        {{ __('Artworks') }}
+                    </x-nav-link>
+
+                    
+
                 </div>
             </div>
 
@@ -34,6 +49,8 @@
                     </x-slot>
 
                     <x-slot name="content">
+
+
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
@@ -74,6 +91,9 @@
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
+
+        
+
             <div class="px-4">
                 <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>

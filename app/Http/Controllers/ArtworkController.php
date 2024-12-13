@@ -9,20 +9,21 @@ use Illuminate\Http\Request;
 
 class ArtworkController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function landing()
+    public function index(Request $request)
     {
-        return view('artworks.landing');
-    }
+        $query = $request->input('query');
 
+        if ($query) {
+            $allArtworks = Artwork::where('title', 'LIKE', "%{$query}%")
+            ->orWhere('description','LIKE', "%{$query}%")
+            ->orderByDesc('creation_date')
+            ->orderByDesc('id')
+            ->get();
+        } else {
+            $allArtworks = Artwork::orderByDesc('creation_date')->orderByDesc('id')->get();
+        }
 
-    public function index()
-    {
-        $allArtworks = Artwork::orderByDesc('creation_date')->orderByDesc('id')->get();
-
-        return view('artworks.index')->with('allArtworks', $allArtworks);
+        return view('artworks.index', compact('allArtworks', 'query'));
     }
 
     /**
@@ -117,8 +118,5 @@ class ArtworkController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        //
-    }
+
 }

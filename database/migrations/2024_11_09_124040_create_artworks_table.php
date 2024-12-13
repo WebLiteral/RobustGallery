@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('artworks', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('file_url')->nullable();
             $table->text('description')->nullable();
-            $table->date('creation_date')->nullable();
+            $table->date('creation_date');
             $table->string('slug')->unique();
             $table->timestamps();
         });

@@ -9,6 +9,8 @@ export default {
         './resources/views/**/*.blade.php',
     ],
 
+
+    
     theme: {
         extend: {
             colors: {
@@ -32,6 +34,8 @@ export default {
             }
             )
         },
-    ]
+    ],
+
+    darkMode: 'false',
 };
 

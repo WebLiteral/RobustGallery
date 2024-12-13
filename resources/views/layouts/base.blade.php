@@ -8,7 +8,7 @@
     @vite(['resources/css/app.css', 'resources/js/randomsong.js'])
 </head>
 
-<div class="bg-stripe-navy h-full w-full flex flex-col items-center justify-start">
+<div class="bg-stripe-navy h-full w-full flex flex-col items-center ">
     @auth
         <div class="flex  justify-between w-full bg-amber-500 font-medium text-center p-2 shadow-md">
 
@@ -35,6 +35,16 @@
 
     @yield('content')
 
+    <div class="pt-24 pb-4 text-center">
+        <p class="text-neutral-700">LiteralHat &copy; 2024</p>
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class='text-neutral-200 text-sm' target="_blank">Easter
+            Egg</a>
+
+    </div>
+
+
 </div>
+
+
 
 </html>
