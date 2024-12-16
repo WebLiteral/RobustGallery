@@ -41,7 +41,7 @@ class AdminArtworkController extends Controller
             //check if they are the right data type
             $request->validate([
                 'title' => ['string'],
-                'description' => ['string'],
+                'description' => ['nullable', 'string'],
                 'creation_date' => ['date'],
                 'slug' => ['string']
             ]);
@@ -54,7 +54,7 @@ class AdminArtworkController extends Controller
             $image->scaleDown(height: 800);
             $webpImage = (string) $image->toWebp(75);
 
-            Storage::disk('s3')->put('artwork/' . $fileName . '.webp', $webpImage);
+            Storage::disk('s3')->put('artwork/literalhat-' . $fileName . '.webp', $webpImage);
 
             $artwork = Artwork::create([
                 'title' => request('title'),

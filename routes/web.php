@@ -12,7 +12,7 @@ Route::get('/about', function(){
     return view('about');
 });
 
-
+Route::redirect('{any}/.env', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');

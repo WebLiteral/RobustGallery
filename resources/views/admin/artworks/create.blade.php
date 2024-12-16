@@ -40,7 +40,7 @@
                             <label class="formtitle" for="description">Description</label>
                             <p class="formdescription">Similar to title, it's case sensitive but also stores line
                                 breaks.</p>
-                            <textarea class="forminput" id="description" name="description" required></textarea>
+                            <textarea class="forminput" id="description" name="description"></textarea>
 
                             <label class="formtitle" for="creation_date">Creation Date</label>
                             <p class="formdescription">Stored as YYYY-MM-DD</p>

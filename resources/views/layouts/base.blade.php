@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LiteralHat | @yield('title', 'LiteralHat.com')</title>
-    @vite(['resources/css/app.css', 'resources/js/randomsong.js'])
+    @vite(['resources/css/app.css'])
 </head>
 
 <div class="bg-stripe-navy h-full w-full flex flex-col items-center ">
