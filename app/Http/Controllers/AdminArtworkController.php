@@ -51,10 +51,8 @@ class AdminArtworkController extends Controller
             $fileName = request('slug');
 
             $image = Image::read($file);
-            $image->scaleDown(height: 800);
+            $image->scaleDown(height: 1024);
             $webpImage = (string) $image->toWebp(75);
-
-            Storage::disk('s3')->put('artwork/literalhat-' . $fileName . '.webp', $webpImage);
 
             $artwork = Artwork::create([
                 'title' => request('title'),
@@ -63,9 +61,13 @@ class AdminArtworkController extends Controller
                 'slug' =>  request('slug'),
             ]);
 
+
             if (!$artwork) {
                 throw new Exception('Failed to upload artwork to database');
             }
+
+            Storage::disk('s3')->put('artwork/literalhat-' . $fileName . '.webp', $webpImage);
+
 
             return redirect()->route('admin.artworks')
                 ->with('success', 'File uploaded successfully!');
@@ -125,7 +127,7 @@ class AdminArtworkController extends Controller
     {
         $artwork = Artwork::where('slug', $slug)->firstOrFail();
         
-        $fileName = "artwork/" . $slug . ".webp";
+        $fileName = "artwork/literalhat-" . $slug . ".webp";
 
         if (Storage::disk('s3')->exists($fileName)) {
             Storage::disk('s3')->delete($fileName);

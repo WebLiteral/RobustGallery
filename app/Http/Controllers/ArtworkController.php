@@ -13,7 +13,9 @@ class ArtworkController extends Controller
     {
         $query = $request->input('query');
 
-        if ($query) {
+        if ($query == "sortbylatest") {
+            $allArtworks = Artwork::orderByDesc('created_at')->get();
+        }  elseif ($query) {
             $allArtworks = Artwork::where('title', 'LIKE', "%{$query}%")
             ->orWhere('description','LIKE', "%{$query}%")
             ->orderByDesc('creation_date')

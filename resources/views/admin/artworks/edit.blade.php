@@ -20,7 +20,7 @@
 
                         <div class="bg-neutral-100 flex flex-col shadow-inner items-center justify-center w-1/2 m-4 rounded-lg p-2">
                             <div id="preview-container">
-                                <img id="preview" class="rounded shadow w-full" src="https://reloaded.literalhat.com/artwork/{{$artwork->slug}}.webp" alt="Image Preview">
+                                <img id="preview" class="rounded shadow w-full" src="https://reloaded.literalhat.com/artwork/literalhat-{{$artwork->slug}}.webp" alt="Image Preview">
                             </div>
                         </div>
 

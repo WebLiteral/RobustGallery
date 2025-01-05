@@ -1,51 +1,35 @@
-@extends('layouts.base')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('title', 'About + FAQ')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
-@section('content')
-
-
-
-<div class="max-w-[800px] flex flex-col py-20 text-start p-2">
-
-    <h1 class="text-4xl py-4 text-neutral-800 text-center font-medium">About</h1>
-    <p class="text-center text-lg">This is a gallery I built and designed to show my work from 2008 - present.</p>
-
-    <h2 class="text-2xl py-4 pt-24 text-neutral-800 font-medium">Art Usage</h2>
-    <p>You are welcome to use my work for <span class="italic">personal, non-commercial purposes</span> like display
-        pictures, forum posts, music videos, etc. </p>
-    <p>Keep it free, be kind, be respectful.</p>
-    <p>Do not use my work for profit.</p>
+    @vite(['resources/css/app.css'])
+    <title>LiteralHat | About</title>
+</head>
 
 
-    <h2 class="text-2xl py-4 pt-16 text-neutral-800 font-medium">How To Credit</h2>
-    <p>Not necessary but appreciated.</p>
-    <p>Credit with <span class='italic'>LiteralHat.com</span> or simply just <span class='italic'>LiteralHat.</span></p>
+<body class='bg-black text-white flex justify-center items-center text-left flex-col h-screen'>
 
-    <h2 class="text-2xl py-4 pt-16 text-neutral-800 font-medium">How To Support</h2>
-    <p>Pirate my music, print my stuff on paper, stick it on your wall, make your own patches, posters, for yourself,
-        and for your friends.</p>
+    <div class='w-[500px] mb-32 space-y-6 leading-7 font-poppins font-light'>
 
-    <p>Thanks for visiting my site.</p>
+        <a href='{{ url('/') }}'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50" class='hoverglow'>
+            <path d="M30 10 L15 25 L30 40" stroke="white" stroke-width="2" fill="none" />
+        </svg>
+    </a>
 
-    <h2 class="text-2xl py-4 pt-16 text-neutral-800 font-medium">Fanart?</h2>
-    <p>Hold onto it for now, I'll make a place for you to submit it later.</p>
-
-    <h2 class="text-2xl py-4 pt-16 text-neutral-800 font-medium">Other Links</h2>
-    <a href="https://www.youtube.com/@literalhat" target="_blank"
-        class="underline text-neutral-500 hover:text-neutral-400 hover:no-underline w-min">YouTube</a>
-    <a href="https://www.youtube.com/@literalhat" target="_blank"
-        class="underline text-neutral-500 hover:text-neutral-400 hover:no-underline w-min">Bandcamp</a>
+        <h1 class='font-orator uppercase text-4xl pb-6 pt-8'>About</h1>
         
-    <p>I do not use social media (Instagram, Twitter etc.) - <span class='italic'>if you see someone claiming to be me, it likely isn't.</span>
-    </p>
+        <p>Sometimes I code, sometimes I animate, sometimes I draw and sometimes I make music. This website is the home of my projects.</p>
 
+    </div>
 
-    <h2 class="text-2xl py-4 pt-16 text-neutral-800 font-medium">Marla</h2>
-    <img src="/img/marla.jpg" class="image rounded shadow w-96">
+</body>
 
-</div>
-
-
-
-@endsection
+</html>

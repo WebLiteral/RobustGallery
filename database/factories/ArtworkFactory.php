@@ -18,12 +18,10 @@ class ArtworkFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $title = fake()->unique()->sentence(),
-            'file_url' => 'https://picsum.photos/seed/'. strval(rand(1,1000)).'/300',
+            'title' => 'Placeholder',
             'description' => fake()->unique()->sentence(),
             'creation_date' => fake()->date('Y-m-d'),
-            'slug' => Str::slug($title)  
-
+            'slug' => 'placeholder'
         ];
     }
 }

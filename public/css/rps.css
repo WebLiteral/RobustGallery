@@ -1,0 +1,1167 @@
+
+
+:root {
+    /* --content-width: 720px; */
+    --content-width: 700px;
+    --container-spacer-top-height: 36px;
+    --container-spacer-bottom-height: 100px;
+
+    --sidemenu-width: 13rem;
+    --submenu-width: 10.5rem;
+
+    --logo-size: 47px;
+    font-size: 16px;
+    letter-spacing: normal;
+
+    --box-borders: 0.3rem;
+
+    --tone1: #631a24;
+    --tone2: #883b4b;
+    --tone3: #754258;
+    --tone4: #4d2537;
+    --tonered: #c4001e;
+    --tonegreen: #106363;
+    --toneblack: #000000;
+    --tonegrey: #697270;
+
+
+    /* Used for main site logo */
+    --font-logo: DataTrash, '04b', Impact, Haettenschweiler;
+    /* Used for headers */
+    --font-header: '04b', "Azeret Mono", Impact, Roboto;
+    /* For P elements */
+    --font-body: "Azeret Mono", RobotoMono, Courier New, Verdana;
+    /* For the side menu */
+    --font-menu: DataTrash, Impact, Verdana, Haettenschweiler;
+    /* For the top menu */
+    --font-loud: Spinnaker, Russo One, Verdana;
+    /* Extra font for fancy text quote */
+    --font-fancy: Retro, Spinnaker, Russo One;
+    /* Extra font for fancy text quote */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+background-color: black;
+}
+
+main {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-header);
+    font-weight: normal;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: var(--font-logo);
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+dl {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: black;
+}
+
+p,
+blockquote,
+span,
+ul,
+input,
+label,
+ol {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    margin-bottom: 0.9rem;
+    font-weight: 500;
+    color: rgb(53, 53, 53);
+}
+
+
+.bold,
+.bold * {
+    font-weight: bold;
+}
+
+.italics {
+    font-style: italic;
+}
+
+
+.underline {
+    text-decoration: underline;
+}
+
+.warning {
+    font-weight: bold;
+    color: red;
+}
+
+li {
+    margin-bottom: 0.1rem;
+}
+
+ul,
+ol {
+    padding-left: 20px;
+}
+
+.tiny {
+    width: 13rem;
+}
+
+.tinytext {
+    font-size: 0.3rem;
+}
+
+.small {
+    font-size: 0.8rem;
+    width: 20rem;
+}
+
+.smalltext {
+    font-size: 0.6rem;
+}
+
+
+.medium, .medium * {
+    font-size: 1.5rem;
+}
+
+.mediumtext {
+    font-size: 1.3rem;
+}
+
+.large, .large * {
+    font-size: 3rem;
+}
+
+.large, .larger * {
+    font-size: 4rem;
+}
+
+
+.huge {
+    font-size: 7rem;
+}
+
+.image {
+    padding: 1rem;
+}
+
+
+.imglarge {
+    width: 30rem;
+}
+
+
+.alignright {
+    text-align: right;
+}
+
+
+.alignleft {
+    text-align: left;
+}
+
+.flexright {
+    display: flex;
+    justify-content: right;
+}
+
+.flexleft {
+    display: flex;
+    justify-content: left;
+}
+
+
+
+
+.form li {
+    list-style-type: none;
+}
+
+.form fieldset {
+    border: none;
+}
+
+#daterange li {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    left: -1rem;
+    position: relative;
+}
+
+#daterange input {
+    justify-content: end;
+}
+
+.button {
+    color: black;
+    background-color: white;
+    font-family: var(--font-logo);
+    font-size: 1.7rem;
+    border: var(--box-borders) solid black;
+    padding: 0.6rem;
+    box-shadow: 7px 7px 0 0 black;
+}
+
+
+
+
+
+.linodots * {
+    list-style-type: none;
+}
+
+/* master container for all inner elements */
+.boxedsection {
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* all whiteboxes must be contained in a contentcontainer */
+.contentcontainer {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 0.3rem;
+}
+
+.whitebox {
+    border: var(--box-borders) solid black;
+    background-color: white;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+
+.clearbox {
+    border: 0.3rem solid transparent;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+
+.chalkboard {
+    background: linear-gradient(133deg, rgba(0,0,0,1) 0%, rgba(20,20,20,1) 28%, rgba(36,36,36,1) 64%, rgba(28,28,28,1) 78%, rgba(18,18,18,1) 100%);
+
+    border: var(--box-borders) solid black;
+}
+
+.padded {
+    padding: 1.2rem;
+}
+
+.paddedsm {
+    padding: 0.7rem;
+}
+
+/* container for middle width */
+.thinwidthcontainer {
+    width: 500px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.widthcontainer {
+    width: var(--content-width);
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.smallwidthcontainer {
+    width: 30rem;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+.bigwidthcontainer {
+    width: 900px;
+    box-sizing: border-box;
+}
+
+.biggerwidthcontainer {
+    width: 1090px;
+    box-sizing: border-box;
+}
+
+.extrawidthcontainer {
+    width: 1100px;
+    box-sizing: border-box;
+
+}
+
+
+/* container for side content */
+.sidecontainer {
+    width: 250px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* container for complex flexbox items */
+.rowbox {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: start;
+}
+
+.columnbox {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* page section styling */
+
+.centerbox {
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+
+.contentrowwhite {
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentrowstripe {
+    background: linear-gradient(to bottom,
+            #1b1b1b,
+            #1b1b1b 48%,
+            #000000 48%,
+            #000000);
+    background-size: 200% 60px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentrowform {
+    background-image: linear-gradient(#000000 3px, transparent 3px), linear-gradient(to right, #000000 3px, transparent 3px);
+    background-size: 48px 48px;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contentrowblack {
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentrowadmin {
+    background:
+    radial-gradient(50% 50% at 100% 0,#353535 0%  5% ,#000000 6%  15%,#353535 16% 25%,#000000 26% 35%,#353535 36% 45%,
+     #000000 46% 55%,#353535 56% 65%,#000000 66% 75%,#353535 76% 85%,#000000 86% 95%,
+     #0000 96%),
+    radial-gradient(50% 50% at 0 100%,#353535 0%  5% ,#000000 6%  15%,#353535 16% 25%,#000000 26% 35%,#353535 36% 45%,
+     #000000 46% 55%,#353535 56% 65%,#000000 66% 75%,#353535 76% 85%,#000000 86% 95%,
+     #0000 96%),
+    radial-gradient(50% 50%,#353535 0%  5% ,#000000 6%  15%,#353535 16% 25%,#000000 26% 35%,#353535 36% 45%,
+     #000000 46% 55%,#353535 56% 65%,#000000 66% 75%,#353535 76% 85%,#000000 86% 95%,
+     #0000 96%),
+    radial-gradient(50% 50%,#353535 0%  5% ,#000000 6%  15%,#353535 16% 25%,#000000 26% 35%,#353535 36% 45%,
+     #000000 46% 55%,#353535 56% 65%,#000000 66% 75%,#353535 76% 85%,#000000 86% 95%,
+     #0000 96%) 53px 53px;
+background-size: 106px 106px;
+background-color: #353535;
+}
+
+
+.footer {
+    box-sizing: border-box;
+    padding-bottom: 7px;
+    background-color: black;
+    height: 300px;
+}
+
+.footercontainer {
+    padding-top: 10rem;
+    width: var(--content-width);
+}
+
+.footercontent {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.footercontent li {
+    width: 100%;
+}
+
+.footercontent a {
+    text-decoration: none;
+    color: gray;
+}
+
+
+.footercontent li {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.buttonwhiteoutline {
+    font-family: var(--font-menu);
+    font-size: 2rem;
+    padding: 0.6rem 1rem;
+    border: var(--box-borders) solid white;
+    color: white;
+    background-color: black;
+    margin: 1rem;
+}
+
+.buttonwhiteoutline:hover {
+    color: black;
+    background-color: white
+}
+
+.buttonfixedwidth {
+    width: 16rem;
+}
+
+
+
+
+.margin {
+    margin: 1rem;
+}
+
+
+.buttonplain {
+    border: none;
+    background-color: none;
+}
+
+
+
+
+/* MENU BARS */
+
+
+
+.nounderline * {
+    text-decoration: none;
+}
+
+#menutop {
+    padding: 0.3rem;
+    margin: 0;
+}
+
+#menutop>li {
+    font-family: var(--font-loud);
+    display: inline;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+#menutop a {
+    color: white;
+}
+
+#menutop a:link {
+    color: white;
+}
+
+#menutop a:hover {
+    color: var(--tone9);
+}
+
+.hoverred a:link {
+    color: white;
+}
+
+.hoverred a:visited {
+    color: white;
+}
+
+.hoverred a:hover {
+    color: #c4001e;
+}
+
+
+
+
+a {
+    color: #727272;
+}
+
+a:hover {
+    color: var(--tonered);
+}
+
+
+
+
+
+
+
+
+
+/* IMAGES */
+
+.framedimage {
+    border: 4px solid black;
+    padding: 2px;
+    margin: 7px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER */
+
+
+.headercontainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: calc(var(--content-width) - 1rem);
+    margin-bottom: -0.9rem;
+    padding-top: 15px;
+}
+
+.logoimage {
+    height: var(--logo-size);
+    position: relative;
+    left: 9px;
+    top: 4px;
+}
+
+#searchbar {
+    padding-bottom: 4px;
+}
+
+
+
+
+
+
+
+#sticky {
+    position: sticky;
+    top: 1rem;
+    margin-left: 4rem;
+    margin-right: 0.4rem;
+
+}
+
+#sticky>li a {
+    display: block;
+    padding: 0.5rem 0.4rem;
+    color: white;
+    border: var(--box-borders) solid black;
+    text-decoration: none;
+    box-shadow: 7px 7px 0 0 black;
+}
+
+#sticky>li a:hover {
+    color: black;
+    background-color: white;
+}
+
+#sticky>li {
+    list-style-type: none;
+    font-family: var(--font-menu);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+
+
+
+.sidemenu {
+    margin-left: 2rem;
+}
+
+
+.spacersmall {
+    height: 10px;
+}
+
+
+.spacermedium {
+    height: 65px;
+}
+
+.pushtoend {
+    height: 7rem;
+}
+
+.hoverlinkbox {
+    height: 200rem;
+}
+
+
+
+
+
+
+
+
+/* Specific styling rules */
+
+.whiteborderdotted {
+    border: 4px dashed white;
+}
+
+
+.extrawidth {
+    width: 1100px;
+}
+
+.whiteborder {
+    border: 3px solid white;
+}
+
+.blackborder {
+    border: 4px solid transparent;
+}
+
+
+#sitelogo {
+    position: relative;
+    top: 1.7rem;
+    margin: -100px 0px -60px -110px;
+    pointer-events: none;
+}
+
+.logotext {
+    font-family: var(--font-logo);
+    text-transform: uppercase;
+    font-size: var(--logo-size);
+    font-weight: normal;
+}
+
+.maxheight {
+    height: 100vh;
+}
+
+
+
+
+
+
+.fancy {
+    font-family: var(--font-fancy);
+
+}
+
+
+
+.quote {
+    font-size: 2.4rem;
+    font-weight: normal;
+    font-family: Insatiable, Sedgwick Ave Display;
+}
+
+
+
+/* extra embelishment colors */
+.tone1 {
+    background-color: var(--tone1);
+    color: white;
+}
+
+.tone2 {
+    background-color: var(--tone2);
+    color: white;
+}
+
+.tone3 {
+    background-color: var(--tone3);
+    color: white;
+}
+
+.tone4 {
+    background-color: var(--tone4);
+    color: white;
+}
+
+.tone5 {
+    background-color: var(--tone5);
+    color: white;
+}
+
+.tone6 {
+    background-color: var(--tone6);
+    color: white;
+}
+
+.tone7 {
+    background-color: var(--tone7);
+    color: white;
+}
+
+.tone8 {
+    background-color: var(--tone8);
+    color: white;
+}
+
+.tone9 {
+    background-color: var(--tone9);
+    color: white;
+}
+
+.tonegreen {
+    background-color: var(--tonegreen);
+    color: white;
+}
+
+.tonered {
+    background-color: var(--tonered);
+    color: white;
+}
+
+.toneblack {
+    background-color: var(--toneblack);
+    color: white !important;
+}
+
+
+.tonegrey {
+    background-color: var(--tonegrey);
+}
+
+
+
+.white * {
+    color: white;
+}
+
+.white {
+    color: white;
+}
+
+
+.nopad, .nopad *{
+    padding: 0;
+    margin: 0;
+}
+
+.padtop {
+    padding-top: 0.9rem;
+}
+
+.padtopsm {
+    padding-top: 0.4rem;
+}
+
+
+.uppercase,
+.uppercase * {
+    text-transform: uppercase;
+}
+
+
+
+#opponents {
+    display: flex;
+}
+
+#characterDialogueBox {
+    width: 30rem;
+    margin-top: -5rem;
+    box-sizing: border-box;
+}
+
+#funnybox {
+    min-height: 5rem;
+}
+
+.scorebox {
+    width: 7rem;
+    height: 11rem;
+}
+
+#characterImage {
+    width: 25rem;
+}
+
+#opponentScore {
+    font-family: var(--font-menu);
+    font-size: 4rem;
+}
+
+#playerScore {
+    font-family: var(--font-menu);
+    font-size: 4rem;
+}
+
+.flexcenter {
+    align-items: center;
+}
+
+.rpsbox {
+    margin: 0 -4rem;
+    box-sizing: border-box;
+}
+
+.rpsbox>p {
+    margin: 0 4rem;
+}
+
+.gamerowBox {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidebutton {
+    background-color: #ffffff00;
+    border: none;
+}
+
+.rpsicon {
+    width: 200px;
+}
+
+.rpsicon>*:hover {
+    transform: rotate(15deg);
+    transform: translateY(-1rem);
+}
+
+
+
+
+
+
+@media (max-width: 1545px) {
+
+    .bigwidthcontainer {
+        width: 60vw;
+        margin: auto;
+    }
+
+    .extrawidthcontainer {
+        width: 60vw;
+        margin: auto;
+    }
+
+    #gallerycontainer {
+        width: 100%;
+    }
+
+    .widthcontainer {
+        width: 45vw;
+    }
+
+    .contentcontainer {
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .framedimage {
+        max-width: 90%;
+        height: auto;
+    }
+
+    #sitelogo {
+        position: relative;
+        top: 1rem;
+        margin: 0;
+        max-width: 100%;
+        height: auto;
+    }
+
+    #gallerysidecontainer {
+        display: none;
+    }
+
+    button {
+        max-width: 27vw;
+    }
+
+    .gallerybutton {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #characterDialogueBox {
+        margin-top: 0.2rem;
+    }
+
+    #characterImage {
+        width: 50rem;
+        margin: -6rem;
+    }
+
+    #gameBox {
+        height: 30rem;
+    }
+
+    .galleryimage {
+        width: 100%;
+    }
+
+}
+
+
+
+
+/* media queries for responsiveness */
+@media (max-width: 1000px) {
+    .gallerythumbnail img {
+        width: 38vw;
+    }
+
+    #gallerytext {
+        font-size: 3.2rem;
+    }
+
+    .widthcontainer {
+        width: 100%;
+    }
+
+    .extrawidthcontainer {
+        width: 100%;
+    }
+
+    .bigwidthcontainer {
+        width: 100%;
+    }
+
+    .biggerwidthcontainer {
+        width: 100%;
+    }
+
+    .boxedsection {
+        width: 100%;
+        flex-direction: column;
+        align-content: flex-start;
+
+    }
+
+    .sidecontainer {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+
+    .sidecontainer:first-child {
+        justify-content: right;
+    }
+
+    #menuleft {
+        order: 1;
+        flex-wrap: nowrap;
+    }
+
+    #menuright {
+        order: 2;
+    }
+
+    .whitebox {
+        width: 100%;
+
+    }
+
+    #hattyright {
+        display: none;
+    }
+
+    .contentcontainer {
+        width: 100%;
+
+    }
+
+    .gallerybutton {
+        border: var(--box-borders) solid black;
+        box-shadow: 7px 7px 0 0 black;
+    }
+
+
+    .headercontainer {
+        justify-content: center;
+    }
+
+    .thinwidthcontainer {
+        width: 100%;
+    }
+
+    #centerbox {
+        order: 1;
+    }
+
+    #sticky {
+        display: none;
+    }
+
+    :root {
+        font-size: 3vw;
+        --logo-size: 10vw;
+    }
+
+    #sitelogo {
+        position: relative;
+        top: 1rem;
+        margin: 0;
+        max-width: 100%;
+    }
+
+
+
+}
+
+
+@media (min-width: 1000px) {
+    .mobileonly {
+        display: none;
+    }
+
+    #hattyleft {
+        display: none;
+    }
+
+    .whitebox {
+        box-shadow: 7px 7px 0 0 black;
+        box-sizing: border-box;
+    }
+
+    .sidemenu ul>li:hover {
+        margin-left: -0.2rem;
+    }
+
+    .sidemenu>li:hover {
+        margin-left: -0.3rem;
+    }
+
+    .contentcontainer {
+        align-items: start;
+    }
+}
+
+.noshadow {
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.imgborder {
+    border: var(--box-borders) solid black;
+}

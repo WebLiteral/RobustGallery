@@ -1,140 +1,60 @@
+@font-face {
+    font-family: "OratorStd";
+    src: url("fonts/OratorStd.otf") format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Data Trash";
+    src: url("fonts/DataTrash.otf") format("opentype");
+    font-style: normal;
+}
 
 
 
-.poppins-thin {
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .poppins-extralight {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-  
-  .poppins-light {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .poppins-medium {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .poppins-semibold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .poppins-bold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .poppins-extrabold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-  .poppins-black {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .poppins-thin-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .poppins-extralight-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: italic;
-  }
-  
-  .poppins-light-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .poppins-regular-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .poppins-medium-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .poppins-semibold-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-  .poppins-bold-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .poppins-extrabold-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: italic;
-  }
-  
-  .poppins-black-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-  
+.oswald {
+  font-family: "Oswald", serif;
+  font-style: normal;
+}
 
+.lato {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .navbutton {
-  @apply text-white bg-neutral-950 shadow-lg hover:shadow-sm font-medium p-2 rounded-full border-2 border-neutral-950 w-min text-nowrap px-4 hover:bg-white hover:border-neutral-900 hover:text-neutral-700
+    @apply text-white bg-neutral-950 shadow-lg hover:shadow-sm font-medium p-2 rounded-full border-2 border-neutral-950 w-min text-nowrap px-4 hover:bg-white hover:border-neutral-900 hover:text-neutral-700;
 }
 
 .navbuttondisabled {
-  @apply text-neutral-200 bg-white shadow-none font-medium p-2  rounded-full border-2 border-neutral-100 w-min text-nowrap px-4
+    @apply text-neutral-200 bg-white shadow-none font-medium p-2  rounded-full border-2 border-neutral-100 w-min text-nowrap px-4;
 }
 
 .formtitle {
-  @apply font-bold text-lg
+    @apply font-bold text-lg;
 }
 
 .formdescription {
-  @apply text-sm text-neutral-500
+    @apply text-sm text-neutral-500;
 }
 
 .forminput {
-  @apply px-2 py-1 mb-6 m-1 hover:border-neutral-900 border-2 rounded border-neutral-600
+    @apply px-2 py-1 mb-6 m-1 hover:border-neutral-900 border-2 rounded border-neutral-600;
 }
 
 .gallerytileimg {
-  @apply rounded object-cover w-full aspect-square 
+    @apply rounded object-cover w-full aspect-square;
+}
+
+.hoverglow {
+  @apply hover:drop-shadow-glow drop-shadow-none;
 }

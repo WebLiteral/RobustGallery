@@ -20,7 +20,7 @@
                                 class='p-2 rounded shadow border-2 border-neutral-200  hover:shadow-md hover:text-neutral-900 '><img
                                     loading='lazy'
                                     class="gallerytileimg"
-                                    src="https://leviathan.literalhat.com/artwork/{{$artwork->slug}}.webp" />
+                                    src="https://leviathan.literalhat.com/artwork/literalhat-{{$artwork->slug}}.webp" />
                                 <p class="p-1 font-bold pt-2 text-sm truncate ... text-start text-wrap">{{$artwork->title}}</p>
                                 <p class="p-1 text-neutral-500 text-sm truncate ... text-start text-wrap">{{$artwork->creation_date}}</p>
                             </a>

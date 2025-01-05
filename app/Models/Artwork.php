@@ -11,7 +11,7 @@ class Artwork extends Model
     use HasFactory;
 
     public $timestamps = true; 
-    protected $fillable = ['title', 'description', 'creation_date', 'slug', 'file_url'];
+    protected $fillable = ['title', 'description', 'creation_date', 'slug'];
 
 }
 
