@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
     {
 
         Artwork::factory(100)->create();
-        Fanart::factory(100)->create();
+        User::factory(1)->create();
     }
 }

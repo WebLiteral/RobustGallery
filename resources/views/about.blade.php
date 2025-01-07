@@ -1,35 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.gallery')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+@section('title', 'About + FAQ')
 
-    @vite(['resources/css/app.css'])
-    <title>LiteralHat | About</title>
-</head>
+@section('content')
 
 
-<body class='bg-black text-white flex justify-center items-center text-left flex-col h-screen'>
 
-    <div class='w-[500px] mb-32 space-y-6 leading-7 font-poppins font-light'>
-
-        <a href='{{ url('/') }}'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50" class='hoverglow'>
-            <path d="M30 10 L15 25 L30 40" stroke="white" stroke-width="2" fill="none" />
-        </svg>
-    </a>
-
-        <h1 class='font-orator uppercase text-4xl pb-6 pt-8'>About</h1>
+    <div class="max-w-[800px] flex flex-col py-20 text-start p-2">
         
-        <p>Sometimes I code, sometimes I animate, sometimes I draw and sometimes I make music. This website is the home of my projects.</p>
+        <h1 class="text-4xl py-4 text-neutral-800 text-center font-medium">About</h1>
+        <p class="text-center text-xl m-4">This is a website I coded and designed to sort and catalog my hobby works. </p>
+        <img class="image w-[250px] mt-10 mx-auto m-2" src="/img/my-children.webp"/>
+
+        <h2 class="text-2xl py-4 pt-24 text-neutral-800 font-medium">Art Usage</h2>
+        <p>If you're looking to use my work for something you can just do so without any prior permission <span>as long as your use is non-commercial.</span> So this means, profile / banner photos, to print out and stick on your wall, desktop wallpapers, etc. are all fine. You can repost my work onto social media platforms if you desire - it is much appreciated. 
+        <p>Be respectful and kind in your use. Not necessary, but you may credit with <span class='italic'>LiteralHat.com</span> or simply just <span class='italic'>LiteralHat.</span></p>
+
+        <h2 class="text-2xl py-4 pt-16 text-neutral-800 font-medium">Supporting the Gallery</h2>
+        <p>All the work I do here is for fun outside of my job. But if you would like to help with hosting costs, you can purchase my music on Bandcamp.</p>
+        <p>Otherwise, simply sit back and relax, and enjoy this gallery.</p>
+
+        <h2 class="text-2xl py-4 pt-16 text-neutral-800 font-medium">Marla</h2>
+        <img src="/img/marla.jpg" class="image rounded shadow w-96">
 
     </div>
 
-</body>
 
-</html>
+
+@endsection

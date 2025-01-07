@@ -11,9 +11,7 @@ Route::fallback(function () {
 });
 
 
-Route::get('/', function(){
-    return view('home');
-});
+Route::get('/', [ArtworkController::class, 'latest'])->name('artworks.show');
 
 Route::get('/funny', function(){
     return view('funny');
@@ -56,13 +54,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/gallery/about', function(){
-    return view('artworks.about');
-});
-Route::get('/gallery', [ArtworkController::class, 'latest'])->name('artworks.show');
-Route::get('/gallery/index', [ArtworkController::class, 'index'])->name('index');
-Route::get('/gallery/random', [ArtworkController::class, 'random'])->name('random');
-Route::get('/gallery/{slug}', [ArtworkController::class, 'show'])->name('artworks.show');
-
-
-Route::get('/fanart', [FanartController::class, 'index'])->name('index');
+Route::get('/artwork', [ArtworkController::class, 'latest'])->name('artworks.show');
+Route::get('/artwork/index', [ArtworkController::class, 'index'])->name('index');
+Route::get('/artwork/random', [ArtworkController::class, 'random'])->name('random');
+Route::get('/artwork/{slug}', [ArtworkController::class, 'show'])->name('artworks.show');

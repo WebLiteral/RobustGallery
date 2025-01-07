@@ -30,10 +30,9 @@
     <div class="flex max-w-[800px] justify-evenly w-full text-neutral-600 ">
         
         <a class="hover:text-neutral-900" href="/">Home</a>
-        <a class="hover:text-neutral-900" href="/gallery">Archive</a>
-        <a class="hover:text-neutral-900" href="{{ route('index') }}">Latest</a>
+        <a class="hover:text-neutral-900" href="/artwork/index">Archive</a>
         <a class="hover:text-neutral-900" href="{{route('random')}}">Random</a>
-        <a class="hover:text-neutral-900" href="/gallery/about">About</a>
+        <a class="hover:text-neutral-900" href="/about">About</a>
     </div>
 
     @yield('content')

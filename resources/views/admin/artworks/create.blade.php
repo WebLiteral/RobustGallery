@@ -65,6 +65,10 @@
                         function previewImage(event) {
                             const preview = document.getElementById('preview');
                             const artworkFile = event.target.files[0];
+                            const datefield = document.getElementById('creation_date');
+                            const slug = document.getElementById('slug');
+                            const title = document.getElementById('title');
+
                             if (artworkFile) {
                                 const reader = new FileReader();
                                 reader.onload = function (e) {
@@ -72,7 +76,19 @@
                                     preview.style.display = 'block';
                                 };
                                 reader.readAsDataURL(artworkFile);
+                                
+                                let fileName = artworkFile.name;
+                                let filedate = fileName.substr(0, 10);
+                                creation_date.value = filedate;
+                                
+                                let slugName = fileName.substring(10).trim();
+                                slugName = slugName.substring(0, slugName.lastIndexOf('.'));
+                                title.value = slugName;
+                                slugName = slugName.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '').replace(' ', '-');
+                                slug.value = slugName;
                             }
+
+                            
                         }
                     </script>
 
