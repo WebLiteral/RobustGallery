@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArtworkController;
 use App\Http\Controllers\FanartController;
 use App\Http\Controllers\AdminArtworkController;
+use App\Http\Controllers\MusicController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +14,7 @@ Route::fallback(function () {
 
 Route::get('/', [ArtworkController::class, 'latest'])->name('artworks.show');
 
+
 Route::get('/funny', function(){
     return view('funny');
 });
@@ -21,13 +23,10 @@ Route::get('/rps', function(){
     return view('rps');
 });
 
-Route::get('/charlieboard', function(){
-    return view('charlieboard');
-});
-
 Route::get('/about', function(){
     return view('about');
 });
+
 
 Route::redirect('{any}/.env', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 
@@ -58,3 +57,16 @@ Route::get('/artwork', [ArtworkController::class, 'latest'])->name('artworks.sho
 Route::get('/artwork/index', [ArtworkController::class, 'index'])->name('index');
 Route::get('/artwork/random', [ArtworkController::class, 'random'])->name('random');
 Route::get('/artwork/{slug}', [ArtworkController::class, 'show'])->name('artworks.show');
+
+Route::get('/fanart', [FanartController::class, 'index'])->name('index');
+
+Route::get('/fanart/submit', function(){
+    return view('fanart.submit');
+});
+Route::post('/fanart/store', [FanartController::class, 'store']);
+
+
+Route::get('/fanart/submitted', [FanartController::class, 'submitted'])->name('fanart.submitted');
+
+Route::get('/music', [MusicController::class, 'index'])->name('music.index');
+

@@ -118,8 +118,8 @@
             style="top: 20px; left: 0px; clip-path: polygon(36% 100%, 45% 74%, 54% 72%, 55% 100%, 88% 99%, 100% 86%, 89% 69%, 100% 59%, 65% 39%, 100% 37%, 100% 0, 0 0, 0 30%, 30% 38%, 0 56%, 5% 68%, 34% 61%, 4% 76%, 7% 95%);" />
 
 
-        <a href="/"><img src="charlieboard/img/sign.png" id="sign" class="draggable"
-                style="top: 10px; left: 910px; clip-path: polygon(16% 17%, 17% 100%, 0 100%, 1% 0%, 100% 0, 100% 17%);" /></a>
+        <img src="charlieboard/img/sign.png" id="sign" class="draggable"
+                style="top: 10px; left: 910px; clip-path: polygon(16% 17%, 17% 100%, 0 100%, 1% 0%, 100% 0, 100% 17%);" />
 
         <div id="guitarra" class='draggable'
             style="top: 20px; left: 530px; clip-path: polygon(63% 57%, 60% 19%, 70% 16%, 66% 0%, 43% 0, 26% 15%, 41% 18%, 38% 56%, 7% 49%, 0 100%, 40% 100%, 100% 99%, 96% 59%);">
@@ -132,7 +132,7 @@
         <img src="charlieboard/img/brush.png" id="brush" onclick="paint('brush');" class="draggable"
             style="top: 275px; left: 310px" />
         <img src="charlieboard/img/ruler.png" id="ruler" class="draggable" style="top: 20px; left: 350px" />
-    <img src="charlieboard/img/cuaderno.png" id="cuaderno" class="draggable" style="top: 80px; left: 350px">
+        <a href="/artwork"><img src="charlieboard/img/cuaderno.png" id="cuaderno" class="draggable" style="top: 80px; left: 350px"></a>
 
 
         <img src="charlieboard/img/libro.png" id="libro" class="draggable" style="top: 350px; left: 350px" />
@@ -612,19 +612,6 @@
     });
 
 
- document.getElementById('cuaderno').addEventListener('click', function() {
-        if (!isDragging){
-            paper.play();
-        const img = this;
-        const srcOriginal = 'charlieboard/img/cuaderno-1.png';
-        const srcNuevo = 'charlieboard/img/cuaderno-2.png';
-        if (img.src.includes(srcOriginal)) {
-            img.src = srcNuevo;
-        } else {
-            img.src = srcOriginal;
-        }
-    }
-    });
 
 
     document.getElementById('rato').addEventListener('click', function() {

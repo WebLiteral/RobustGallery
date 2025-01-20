@@ -32,7 +32,9 @@
         <a class="hover:text-neutral-900" href="/">Home</a>
         <a class="hover:text-neutral-900" href="/artwork/index">Archive</a>
         <a class="hover:text-neutral-900" href="{{route('random')}}">Random</a>
+        <a class="hover:text-neutral-900" href="/fanart">Fanart</a>
         <a class="hover:text-neutral-900" href="/about">About</a>
+        
     </div>
 
     @yield('content')

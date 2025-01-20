@@ -15,8 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
+        $this->call(MusicSeeder::class);
         Artwork::factory(100)->create();
         User::factory(1)->create();
+        Fanart::factory(100)->create();
     }
 }

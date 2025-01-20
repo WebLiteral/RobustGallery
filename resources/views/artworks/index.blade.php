@@ -79,7 +79,7 @@
 
                     <div class="text-neutral-600 sm:grid-cols-3 grid-cols-2 md:grid-cols-6 w-full grid gap-2">
                         @foreach ($yearArtworks as $artwork)
-                            <a href='{{ url('/gallery/' . $artwork->slug) }}'
+                            <a href='{{ url('/artwork/' . $artwork->slug) }}'
                                 class='p-2 rounded shadow border-2 border-neutral-200 hover:shadow-md hover:text-neutral-900'>
                                 <img loading='lazy' class="gallerytileimg"
                                     src="https://leviathan.literalhat.com/artwork/literalhat-{{ $artwork->slug }}.webp" />
